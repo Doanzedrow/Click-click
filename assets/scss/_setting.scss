@@ -1,0 +1,289 @@
+.setting {
+  padding-top: 20px;
+
+  p {
+    font-weight: 600;
+  }
+
+  font-family: Quicksand;
+
+  .product-charactor {
+    .upload-image-product {
+      .upload-image {
+        position: relative;
+        margin-bottom: 12px;
+        display: flex;
+        height: 50px;
+        border-radius: 36px;
+        background: linear-gradient(90deg, #821800 -35.4%, #ed8500 122.69%);
+        align-items: center;
+        justify-content: space-between;
+        width: 270px;
+        z-index: 1;
+        padding: 0 30px;
+
+        &::before {
+          content: "";
+          left: 4%;
+          z-index: 1;
+          position: absolute;
+          width: 250px;
+          height: 35px;
+          border-radius: 26px;
+          background: linear-gradient(90deg,
+              rgba(237, 133, 0, 0.19) -102.58%,
+              rgba(112, 21, 0, 0.93) 98.52%);
+          box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.6) inset;
+        }
+
+        .label-product {
+          z-index: 2;
+          font-size: 14px;
+          color: #fff;
+          font-weight: unset;
+          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .btn-upload-product {
+          z-index: 2;
+        }
+
+        .fileInput {
+          display: none;
+        }
+
+        .viewImage {
+          border: unset;
+          position: absolute;
+          left: 105%;
+          width: 40px;
+          height: 40px;
+          background: url("../image/viewImage.png");
+        }
+
+
+      }
+    }
+
+    .img-product {
+      display: none;
+      position: absolute;
+      z-index: 9;
+      width: 150px;
+      height: 150px;
+      left: 30%;
+      top: 10%;
+      // background: url(../image/dog.png);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .add-product {
+      height: 60px;
+
+      #btn-add-product {
+        background: url(../image/add.png);
+        background-size: cover;
+        width: 30px;
+        height: 30px;
+        border: unset;
+      }
+    }
+
+    .products {
+      .product-title {
+        position: relative;
+        margin-bottom: 12px;
+        display: flex;
+        height: 50px;
+        border-radius: 36px;
+        background: linear-gradient(90deg, #821800 -35.4%, #ed8500 122.69%);
+        align-items: center;
+        justify-content: space-between;
+        width: 270px;
+        z-index: 1;
+        padding: 0 30px;
+
+
+        .name-product {
+          z-index: 5;
+          left: 4%;
+          z-index: 1;
+          position: absolute;
+          width: 250px;
+          height: 35px;
+          border-radius: 26px;
+          background: linear-gradient(90deg,
+              rgba(237, 133, 0, 0.19) -102.58%,
+              rgba(112, 21, 0, 0.93) 98.52%);
+          box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.6) inset;
+          border: unset;
+          color: #fff;
+          padding: 10px;
+
+          &::placeholder {
+            color: #fff;
+          }
+
+          &:focus {
+            outline: none;
+            border: none;
+          }
+        }
+
+        .removeProduct {
+          background: url(../image/remove.png);
+          border: unset;
+          position: absolute;
+          left: 105%;
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+
+    .upload-image-charactor {
+      .upload-image {
+        position: relative;
+        margin-bottom: 12px;
+        display: flex;
+        height: 50px;
+        border-radius: 36px;
+        background: linear-gradient(90deg, #821800 -35.4%, #ed8500 122.69%);
+        align-items: center;
+        justify-content: space-between;
+        width: 270px;
+        z-index: 1;
+        padding: 0 30px;
+
+        &::before {
+          content: "";
+          left: 4%;
+          z-index: 1;
+          position: absolute;
+          width: 250px;
+          height: 35px;
+          border-radius: 26px;
+          background: linear-gradient(90deg,
+              rgba(237, 133, 0, 0.19) -102.58%,
+              rgba(112, 21, 0, 0.93) 98.52%);
+          box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.6) inset;
+        }
+
+        .label-charactor {
+          z-index: 2;
+          font-size: 14px;
+          color: #fff;
+          font-weight: unset;
+          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .btn-upload-charactor {
+          z-index: 2;
+        }
+
+        .fileInput {
+          display: none;
+        }
+
+        .removeCharactor {
+          border: unset;
+          position: absolute;
+          left: 105%;
+          width: 40px;
+          height: 40px;
+          background: url("../image/remove.png");
+        }
+      }
+    }
+
+    .add-charactor {
+      height: 60px;
+
+      #btn-add-charactor {
+        background: url(../image/add.png);
+        background-size: cover;
+        width: 30px;
+        height: 30px;
+        border: unset;
+      }
+    }
+  }
+
+  .general {
+    .input-general {
+      .input-style {
+        position: relative;
+        margin-bottom: 12px;
+        display: flex;
+        height: 50px;
+        border-radius: 36px;
+        background: linear-gradient(90deg, #821800 -35.4%, #ed8500 122.69%);
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+        z-index: 1;
+        padding: 0 30px;
+
+        .countDown {
+          z-index: 5;
+          left: 1.5%;
+          position: absolute;
+          width: 97%;
+          height: 35px;
+          border-radius: 26px;
+          background: linear-gradient(90deg,
+              rgba(237, 133, 0, 0.19) -102.58%,
+              rgba(112, 21, 0, 0.93) 98.52%);
+          box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.6) inset;
+          border: unset;
+          color: #fff;
+          padding: 10px;
+
+          &::placeholder {
+            color: #fff;
+          }
+
+          &:focus {
+            outline: none;
+            border: none;
+          }
+        }
+      }
+
+      .note {
+        position: absolute;
+        left: 105%;
+        width: 58%;
+        font-family: Quicksand;
+      }
+    }
+  }
+
+  .save-setting {
+    position: relative;
+    display: flex;
+    height: 50px;
+    border-radius: 36px;
+    background: #FFF;
+    box-shadow: 2px -2px 10px 0px rgba(0, 0, 0, 0.30) inset;
+    align-items: center;
+    justify-content: space-between;
+    width: 59%;
+    z-index: 1;
+    padding: 0 30px;
+
+    #save {
+      z-index: 5;
+      left: 1.5%;
+      position: absolute;
+      width: 97%;
+      height: 35px;
+      border-radius: 36px;
+      background: linear-gradient(180deg, #FF5050 0.08%, #D30000 100%);
+      border: unset;
+      color: #fff;
+      padding: 10px;
+    }
+  }
+}

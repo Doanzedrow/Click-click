@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/image/Logo_Minigame.png" type="image/x-icon" />
+    <meta id="metaDes" name="description" content="CLICK CLICK" />
+    <title>Click Click</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap"
+        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&family=Quicksand:wght@500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+    <link rel="stylesheet" href="assets/scss/index.css" />
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="logo">
+                        <img src="assets/image/Logo_Minigame.png" alt="logo" />
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="header-nav">
+                        <li><a href="index.html">Play</a></li>
+                        <li><a href="rules.html">Rules</a></li>
+                        <li><a href="awardlist.html">Prize</a></li>
+                        <li><a href="ratings.html">Ranks</a></li>
+                        <li><a href="setting.html">Setting</a></li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container setting">
+            <div class="model-play ">
+                <div class="product-charactor">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>Product setting</p>
+                            <div class="row">
+                                <div class="col-lg-6 product-container">
+                                    <div class="upload-image-product">
+                                        <div class="upload-image" data-id="1">
+                                            <label for="fileInput-1" class="label-product" id="label-product-1"></label>
+                                            <input type="file" class="fileInput" id="fileInput-1"
+                                                name="image-product" />
+                                            <label for="fileInput-1" class="btn-upload-product">
+                                                <img src="assets/image/upload.png" alt="" />
+                                            </label>
+                                            <button class="viewImage" data-target="fileInput-1"></button>
+                                        </div>
+                                        <div class="img-product" id="img-product-1"></div>
+
+                                        <div class="upload-image" data-id="2">
+                                            <label for="fileInput-2" class="label-product" id="label-product-2"></label>
+                                            <input type="file" class="fileInput" id="fileInput-2"
+                                                name="image-product" />
+                                            <label for="fileInput-2" class="btn-upload-product">
+                                                <img src="assets/image/upload.png" alt="" />
+                                            </label>
+                                            <button class="viewImage" data-target="fileInput-2"></button>
+                                        </div>
+                                        <div class="img-product" id="img-product-2"></div>
+
+                                        <div class="upload-image" data-id="3">
+                                            <label for="fileInput-3" class="label-product" id="label-product-3"></label>
+                                            <input type="file" class="fileInput" id="fileInput-3"
+                                                name="image-product" />
+                                            <label for="fileInput-3" class="btn-upload-product">
+                                                <img src="assets/image/upload.png" alt="" />
+                                            </label>
+                                            <button class="viewImage" data-target="fileInput-3"></button>
+                                        </div>
+                                        <div class="img-product" id="img-product-3"></div>
+                                    </div>
+                                    <div class="add-product">
+                                        <button id="btn-add-product"></button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 charactor-container">
+                                    <div class="products">
+                                        <div class="product-title" data-id="1">
+                                            <input type="text" class="name-product" id="name-product-1"
+                                                name="title-product" placeholder="Name product" />
+                                            <button class="removeProduct" data-target="1"></button>
+                                        </div>
+                                        <div class="product-title" data-id="2">
+                                            <input type="text" class="name-product" name="title-product"
+                                                placeholder="Name product" id="name-product-2" />
+                                            <button class="removeProduct" data-target="2"></button>
+                                        </div>
+                                        <div class="product-title" data-id="3">
+                                            <input type="text" class="name-product" name="title-product"
+                                                placeholder="Name product" id="name-product-3" />
+                                            <button class="removeProduct" data-target="3"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <p>Charactor setting</p>
+                            <div class="upload-image-charactor">
+
+                                <div class="upload-image" data-id="charactor-1">
+                                    <label for="charactor-1" class="label-charactor" id="label-charactor-1"></label>
+                                    <input type="file" class="fileInput" id="charactor-1" />
+                                    <label for="charactor-1" class="btn-upload-charactor"><img
+                                            src="assets/image/upload.png" alt="" /></label>
+                                    <button class="removeCharactor" data-target="charactor-1"></button>
+                                </div>
+                                <div class="upload-image" data-id="charactor-2">
+                                    <label for="charactor-2" class="label-charactor" id="label-charactor-2"></label>
+                                    <input type="file" class="fileInput" id="charactor-2" />
+                                    <label for="charactor-2" class="btn-upload-charactor"><img
+                                            src="assets/image/upload.png" alt="" /></label>
+                                    <button class="removeCharactor" data-target="charactor-2"></button>
+                                </div>
+                                <div class="upload-image" data-id="charactor-3">
+                                    <label for="charactor-3" class="label-charactor" id="label-charactor-3"></label>
+                                    <input type="file" class="fileInput" id="charactor-3" />
+                                    <label for="charactor-3" class="btn-upload-charactor"><img
+                                            src="assets/image/upload.png" alt="" /></label>
+                                    <button class="removeCharactor" data-target="charactor-3"></button>
+                                </div>
+
+                            </div>
+                            <div class="add-charactor">
+                                <button id="btn-add-charactor"></button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="general">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>General setting</p>
+                            <div class="input-general">
+                                <div class="input-countDown input-style">
+                                    <input type="text" class="countDown" name="countDown"
+                                        placeholder="Countdown time (s)" />
+                                </div>
+                            </div>
+                            <div class="input-general">
+                                <div class="input-countDown input-style">
+                                    <input type="text" class="countDown" name="pointStep" placeholder="Point step" />
+                                    <div class="note">Points will be awarded when the customer chooses the correct
+                                        answer
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="input-general">
+                                <div class="input-countDown input-style">
+                                    <input type="text" class="countDown" name="difficulty" placeholder="Difficulty" />
+                                    <div class="note">Time will increase with correct answer</div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="save-setting">
+                    <button id="save">Save</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/howler@2.2.3/dist/howler.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="assets/js/index.js"></script>
+</body>
+
+</html>

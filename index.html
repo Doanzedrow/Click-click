@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="assets/image/Logo_Minigame.png" type="image/x-icon" />
+  <meta id="metaDes" name="description" content="CLICK CLICK" />
+  <title>Click Click</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&family=Quicksand:wght@500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/scss/index.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="logo">
+            <img src="assets/image/Logo_Minigame.png" alt="logo" />
+          </div>
+        </div>
+        <div class="col">
+          <div class="header-nav">
+            <li><a href="index.html">Play</a></li>
+            <li><a href="rules.html">Rules</a></li>
+            <li><a href="awardlist.html">Prize</a></li>
+            <li><a href="ratings.html">Ranks</a></li>
+            <li><a href="setting.html">Setting</a></li>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <div class="model-play">
+        <!-- countdown -->
+        <div class="time_play">
+          <div class="time-header">Starting</div>
+          <div class="time-content">3</div>
+        </div>
+        <!-- start game -->
+        <div class="start-game">
+          <img src="assets/image/Body.png" alt="">
+          <div class="rules">
+            <p><strong>01.</strong> Choose the right product and product quantity</p>
+            <p>
+              <strong>02.</strong> Each player has time to choose a product, choose the fastest product to score points
+            </p>
+            <p>
+              <strong>03.</strong> The more products you choose correctly, the more points you score and the chance to
+              win prizes
+            </p>
+            <button class="btn-start-game">Start game</button>
+          </div>
+
+        </div>
+
+        <!-- Time -->
+        <div class="header-model">
+          <div class="time">
+            <img src="assets/image/icon_clock.png" alt="" />
+            <div class="progress">
+              <div id="customProgressBar" class="progress-bar progress-bar-danger progress-bar-striped active"
+                role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+            </div>
+            <p class="level">Level 1</p>
+          </div>
+          <div class="point">
+            <img src="./assets/image/icon_point.png" alt="" />
+            <div class="point-content">0</div>
+          </div>
+        </div>
+
+        <!-- Con vật -->
+        <div class="ques-model">
+          <div id="ques_1">
+            <img id="result" src="./assets/image/result.png" alt="" />
+            <p id="wrong">Wrong!!!</p>
+            <div class="result-content"></div>
+            <img src="./assets/image/dog.png" alt="" />
+            <div class="ques_title">Dog</div>
+          </div>
+          <div id="ques_2">
+            <img id="result" src="./assets/image/result.png" alt="" />
+            <p id="wrong">Wrong!!!</p>
+            <div class="result-content"></div>
+            <img src="./assets/image/cat.png" alt="" />
+            <div class="ques_title">Cat</div>
+          </div>
+          <div id="ques_3">
+            <img id="result" src="./assets/image/result.png" alt="" />
+            <p id="wrong">Wrong!!!</p>
+            <div class="result-content"></div>
+            <img src="./assets/image/unicon.png" alt="" />
+            <div class="ques_title">Unicon</div>
+          </div>
+          <div id="ques_4">
+            <img id="result" src="./assets/image/result.png" alt="" />
+            <p id="wrong">Wrong!!!</p>
+            <div class="result-content"></div>
+            <img src="./assets/image/bee.png" alt="" />
+            <div class="ques_title">Bee</div>
+          </div>
+        </div>
+
+        <!-- Người hỏi -->
+        <div class="player-model">
+          <div id="player_1">
+            <img id="talk" src="./assets/image/messeage_talk.png" alt="" />
+            <div class="player_content"></div>
+            <div class="image-container">
+              <img class="avatar" src="./assets/image/girl_red.png" alt="" />
+              <img class="avatar-stroke" src="./assets/image/girl_red_stroke.png" alt="" />
+            </div>
+          </div>
+          <div id="player_2">
+            <img id="talk" src="./assets/image/messeage_talk.png" alt="" />
+            <div class="player_content"></div>
+            <div class="image-container">
+              <img class="avatar" src="./assets/image/girl_orange.png" alt="" />
+              <img class="avatar-stroke" src="./assets/image/girl_orange_stroke.png" alt="" />
+            </div>
+          </div>
+          <div id="player_3">
+            <img id="talk" src="./assets/image/messeage_talk.png" alt="" />
+            <div class="player_content"></div>
+            <div class="image-container">
+              <img class="avatar" src="./assets/image/girl_blue.png" alt="" />
+              <img class="avatar-stroke" src="./assets/image/girl_blue_stroke.png" alt="" />
+            </div>
+          </div>
+          <div id="player_4">
+            <img id="talk" src="./assets/image/messeage_talk.png" alt="" />
+            <div class="player_content"></div>
+            <div class="image-container">
+              <img class="avatar" src="./assets/image/boy_red.png" alt="" />
+              <img class="avatar-stroke" src="./assets/image/boy_red_stroke.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+  <div class="model">
+    <div class="model-container">
+      <div class="model-header">
+        <img id="icon_start" src="/assets/image/icon_start.png" alt="" />
+        <img id="icon_exit" src="/assets/image/icon_exit.png" alt="" />
+      </div>
+      <div class="model_body">
+        <div class="title_model">Your points</div>
+        <div class="content_model">0</div>
+      </div>
+      <div class="model_active">
+        <button class="continue">continue</button>
+        <button class="login_model">Đăng nhập</button>
+        <button class="score">Tính điểm</button>
+      </div>
+    </div>
+  </div>
+  <div class="active-icon">
+    <img id="music" src="./assets/image/icon_music_on.png" alt="" />
+    <img id="volume" src="./assets/image/icon_volum_on.png" alt="" />
+    <img id="pause" src="./assets/image/icon_play.png" alt="" />
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/howler@2.2.3/dist/howler.min.js"></script>
+  <script src="assets/js/index.js"></script>
+</body>
+
+</html>

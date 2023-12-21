@@ -1,5 +1,4 @@
 .container {
-  padding: 0 50px;
 
   table {
     margin-top: 40px;
@@ -12,6 +11,7 @@
       box-shadow: 0px 0px 1px 1px #979797 inset, 0px 0px 0px 0px #979797 inset;
       height: 44px;
     }
+
     th,
     td {
       text-align: center;
@@ -25,6 +25,7 @@
       font-weight: 700;
       line-height: 28px;
     }
+
     td {
       color: #222;
       text-align: center;
@@ -33,9 +34,18 @@
       font-style: normal;
       font-weight: 400;
       line-height: 28px;
+
       img {
         width: 35px;
       }
     }
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .email,
+  .phone {
+    display: none;
   }
 }

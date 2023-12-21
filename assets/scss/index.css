@@ -9,10 +9,12 @@ body {
   scroll-behavior: smooth;
   background-image: url("../image/background.png");
   background-size: cover;
+  height: 100vh;
 }
 
 header .container {
   margin: 0 150px;
+  height: 60px;
 }
 header .container .row {
   display: flex;
@@ -22,7 +24,8 @@ header .container .row .col {
   flex: 1;
 }
 header .container .row .col .header-nav {
-  display: flex;
+  z-index: 10;
+  display: none;
   position: relative;
   justify-content: end;
 }
@@ -41,6 +44,15 @@ header .container .row .col .header-nav li a {
   font-weight: 400;
   line-height: normal;
   font-size: 1.3em;
+}
+header .container .row .col .nav-bar {
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+}
+header .container .row .col .nav-bar img {
+  cursor: pointer;
+  width: 50px;
 }
 header .container .row .col .logo img {
   padding-top: 10px;
@@ -84,16 +96,6 @@ section .container .model-play .header-model .time .progress {
   background: #761b00;
   border-radius: 40px;
 }
-section .container .model-play .header-model .time .level {
-  display: block;
-  color: #ef1c24;
-  font-family: Quicksand;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 24px;
-  transform: translate(-195px, 30px);
-}
 section .container .model-play .header-model .point {
   flex: 1;
   display: inline-flex;
@@ -115,6 +117,16 @@ section .container .model-play .header-model .point .point-content {
   font-weight: 500;
   font-size: 1.9em;
   width: 190px;
+}
+section .container .model-play .header-model .level {
+  display: block;
+  color: #ef1c24;
+  font-family: Quicksand;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  transform: translate(-950px, 63%);
 }
 section .container .model-play .ques-model {
   display: none;
@@ -478,6 +490,409 @@ section .container .model-play .start-game .rules .btn-start-game {
   height: 60px;
 }
 
+@media screen and (max-width: 600px) {
+  header .container {
+    margin: 0 20px;
+    height: 60px;
+  }
+  header .container .row {
+    display: flex;
+    align-items: center;
+  }
+  header .container .row .col {
+    flex: 1;
+  }
+  header .container .row .col .header-nav {
+    display: none;
+    position: relative;
+    justify-content: end;
+    flex-direction: column;
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    width: 150px;
+    background: url(../image/bg_3.png);
+    background-size: contain;
+  }
+  header .container .row .col .header-nav li {
+    display: inline-block;
+    list-style: none;
+    margin: 5px 0;
+  }
+  header .container .row .col .header-nav li a {
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: block;
+    color: #000;
+    font-family: Pacifico;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    font-size: 1.3em;
+  }
+  header .container .row .col .nav-bar {
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+  }
+  header .container .row .col .nav-bar img {
+    cursor: pointer;
+    width: 50px;
+  }
+  header .container .row .col .logo img {
+    padding-top: 10px;
+    width: 100px;
+  }
+  section .container {
+    display: inline-block;
+    margin: 20px 10px 20px 20px;
+    background-image: url("../image/popup.png");
+    background-size: cover;
+    border-radius: 20px;
+    border: 1px solid #f3ebeb;
+    height: 66vh;
+    width: 90%;
+  }
+  section .container .model-play {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 20px;
+  }
+  section .container .model-play .header-model {
+    display: none;
+    margin-bottom: 5px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  section .container .model-play .header-model .time {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding: 20px 20px 20px 20px;
+    justify-content: start;
+  }
+  section .container .model-play .header-model .time img {
+    width: 30px;
+  }
+  section .container .model-play .header-model .time .progress {
+    position: relative;
+    top: 10%;
+    width: 100%;
+    height: 30px;
+    border: 3.5px solid #ed8500;
+    background: #761b00;
+    border-radius: 40px;
+    transform: translateY(25%);
+  }
+  section .container .model-play .header-model .point {
+    display: inline-flex;
+    align-items: center;
+    flex: 1;
+    padding: 20px 20px 20px 20px;
+    justify-content: end;
+  }
+  section .container .model-play .header-model .point img {
+    width: 30px;
+  }
+  section .container .model-play .header-model .point .point-content {
+    margin-left: 10px;
+    display: inline-flex;
+    height: 35px;
+    background: #761b00;
+    border-radius: 40px;
+    border: 3.5px solid #ed8500;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.2em;
+    width: 190px;
+  }
+  section .container .model-play .header-model .level {
+    width: 100%;
+    display: block;
+    color: #ef1c24;
+    font-family: Quicksand;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    transform: translate(58px, -35px);
+  }
+  section .container .model-play .ques-model {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  section .container .model-play .ques-model #ques_1,
+  section .container .model-play .ques-model #ques_2,
+  section .container .model-play .ques-model #ques_3,
+  section .container .model-play .ques-model #ques_4 {
+    flex: 1;
+    position: relative;
+    margin: 0 0px;
+    text-align: center;
+    cursor: pointer;
+  }
+  section .container .model-play .ques-model #ques_1 img,
+  section .container .model-play .ques-model #ques_2 img,
+  section .container .model-play .ques-model #ques_3 img,
+  section .container .model-play .ques-model #ques_4 img {
+    width: 120px;
+    height: 120px;
+  }
+  section .container .model-play .ques-model #ques_1 .ques_title,
+  section .container .model-play .ques-model #ques_2 .ques_title,
+  section .container .model-play .ques-model #ques_3 .ques_title,
+  section .container .model-play .ques-model #ques_4 .ques_title {
+    color: #222;
+    text-align: center;
+    font-family: Quicksand;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    /* 100% */
+    text-transform: uppercase;
+  }
+  section .container .model-play .ques-model #ques_1 #result,
+  section .container .model-play .ques-model #ques_2 #result,
+  section .container .model-play .ques-model #ques_3 #result,
+  section .container .model-play .ques-model #ques_4 #result {
+    display: none;
+    position: absolute;
+    z-index: 5;
+    width: 90px;
+    height: 90px;
+    top: -25%;
+    left: 50%;
+    background-size: cover;
+  }
+  section .container .model-play .ques-model #ques_1 .result-content,
+  section .container .model-play .ques-model #ques_2 .result-content,
+  section .container .model-play .ques-model #ques_3 .result-content,
+  section .container .model-play .ques-model #ques_4 .result-content {
+    display: none;
+    position: absolute;
+    width: 50px;
+    left: 63%;
+    top: -20%;
+    z-index: 7;
+    color: #ef1c24;
+    font-family: Pacifico;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  section .container .model-play .ques-model #ques_1 #wrong,
+  section .container .model-play .ques-model #ques_2 #wrong,
+  section .container .model-play .ques-model #ques_3 #wrong,
+  section .container .model-play .ques-model #ques_4 #wrong {
+    display: none;
+    position: absolute;
+    color: #ef1c24;
+    text-align: center;
+    font-family: Pacifico;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    top: -30%;
+    left: 50%;
+    height: 40%;
+    z-index: 3;
+  }
+  section .container .model-play .ques-model #ques_1 #wrong::after,
+  section .container .model-play .ques-model #ques_2 #wrong::after,
+  section .container .model-play .ques-model #ques_3 #wrong::after,
+  section .container .model-play .ques-model #ques_4 #wrong::after {
+    content: "Wrong!!!";
+    position: absolute;
+    top: -3%;
+    left: 1%;
+    height: 40%;
+    -webkit-text-stroke-width: 18px;
+    -webkit-text-stroke-color: #fff;
+    color: transparent;
+    z-index: -1;
+  }
+  section .container .model-play .player-model {
+    display: none;
+    align-items: center;
+    justify-content: start;
+    margin-top: 30px;
+    height: 180px;
+    overflow-x: auto;
+    width: 100%;
+  }
+  section .container .model-play .player-model #player_1,
+  section .container .model-play .player-model #player_2,
+  section .container .model-play .player-model #player_3,
+  section .container .model-play .player-model #player_4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    position: relative;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  section .container .model-play .player-model #player_1 .image-container,
+  section .container .model-play .player-model #player_2 .image-container,
+  section .container .model-play .player-model #player_3 .image-container,
+  section .container .model-play .player-model #player_4 .image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  section .container .model-play .player-model #player_1 .image-container .avatar,
+  section .container .model-play .player-model #player_2 .image-container .avatar,
+  section .container .model-play .player-model #player_3 .image-container .avatar,
+  section .container .model-play .player-model #player_4 .image-container .avatar {
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    top: 1%;
+    z-index: 5;
+  }
+  section .container .model-play .player-model #player_1 .image-container .avatar-stroke,
+  section .container .model-play .player-model #player_2 .image-container .avatar-stroke,
+  section .container .model-play .player-model #player_3 .image-container .avatar-stroke,
+  section .container .model-play .player-model #player_4 .image-container .avatar-stroke {
+    position: relative;
+    width: 155px;
+    height: 105px;
+    z-index: 4;
+    pointer-events: none;
+  }
+  section .container .model-play .player-model #player_1 #talk,
+  section .container .model-play .player-model #player_2 #talk,
+  section .container .model-play .player-model #player_3 #talk,
+  section .container .model-play .player-model #player_4 #talk {
+    position: absolute;
+    z-index: 8;
+    display: none;
+    width: 100px;
+    height: 70px;
+    top: -20%;
+    left: 55%;
+    background-size: contain;
+  }
+  section .container .model-play .player-model #player_1 .player_content,
+  section .container .model-play .player-model #player_2 .player_content,
+  section .container .model-play .player-model #player_3 .player_content,
+  section .container .model-play .player-model #player_4 .player_content {
+    display: none;
+    position: absolute;
+    width: 100px;
+    left: 55%;
+    top: -5%;
+    z-index: 9;
+    color: #222;
+    text-align: center;
+    font-family: Quicksand;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+  section .container .model-play .time_play {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+  }
+  section .container .model-play .time_play .time-header {
+    line-height: 46px;
+    padding: 0 24px;
+    display: block;
+    font-family: Pacifico;
+    color: #222;
+    font-size: 50px;
+    font-style: normal;
+    transform: translateY(80px);
+  }
+  section .container .model-play .time_play .time-content {
+    font-family: Pacifico;
+    font-weight: 600;
+    font-size: 15em;
+  }
+  section .container .model-play .start-game {
+    margin: 20px 0;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  section .container .model-play .start-game img {
+    flex: 1;
+    margin-right: 0;
+    width: 100%;
+  }
+  section .container .model-play .start-game .rules {
+    flex: 1;
+    margin-left: 0;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  section .container .model-play .start-game .rules p {
+    margin-bottom: 30px;
+    font-size: 17px;
+    text-align: start;
+    color: #000;
+    display: flex;
+    font-family: Quicksand;
+    font-weight: 600;
+  }
+  section .container .model-play .start-game .rules p strong {
+    font-family: Quicksand;
+    margin-right: 10px;
+  }
+  section .container .model-play .start-game .rules .btn-start-game {
+    margin-top: 20px;
+    display: inline-block;
+    transform: translateY(0);
+    padding: 5px 100px 5px 100px;
+    border: 8px solid #fefefe;
+    border-radius: 36px;
+    background: linear-gradient(180deg, #FF5050 0.08%, #D30000 100%);
+    color: #fff;
+    font-size: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    font-family: Quicksand;
+    text-transform: uppercase;
+  }
+  .active-icon {
+    position: absolute;
+    left: 86%;
+    top: 78%;
+  }
+  .active-icon img {
+    cursor: pointer;
+    display: block;
+    margin-bottom: 10px;
+    width: 60px;
+    height: 60px;
+  }
+}
 .container .rules-content {
   display: flex;
   flex-direction: column;
@@ -499,6 +914,30 @@ section .container .model-play .start-game .rules .btn-start-game {
   margin-right: 10px;
 }
 
+@media screen and (max-width: 600px) {
+  .container .rules-content {
+    overflow: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+    padding: 20px 20px;
+  }
+  .container .rules-content p {
+    margin-bottom: 30px;
+    font-size: 1.1em;
+    text-align: start;
+    color: #000;
+    display: flex;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  }
+  .container .rules-content p strong {
+    font-family: cursive;
+    margin-right: 10px;
+  }
+}
 .container .awardlist {
   display: flex;
   flex-direction: column;
@@ -547,8 +986,57 @@ section .container .model-play .start-game .rules .btn-start-game {
   margin-right: 10px;
 }
 
-.container {
-  padding: 0 50px;
+@media screen and (max-width: 600px) {
+  .container .awardlist {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 10px;
+  }
+  .container .awardlist .awardlist-header p {
+    margin-bottom: 30px;
+    font-size: 12px;
+    text-align: start;
+    color: #000;
+    display: flex;
+    font-weight: 600;
+    font-family: Quicksand;
+  }
+  .container .awardlist .awardlist-header p strong {
+    font-family: Quicksand;
+    margin-right: 10px;
+  }
+  .container .awardlist .awardlist-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container .awardlist .awardlist-content .awardlist-image {
+    display: flex;
+  }
+  .container .awardlist .awardlist-content .awardlist-image img {
+    flex: 1;
+    width: 70px;
+    margin: 0 30px;
+  }
+  .container .awardlist .awardlist-footer {
+    margin-top: 20px;
+  }
+  .container .awardlist .awardlist-footer p {
+    font-weight: 600;
+    font-size: 12px;
+    text-align: start;
+    color: #000;
+    display: flex;
+    font-family: Quicksand;
+  }
+  .container .awardlist .awardlist-footer p strong {
+    font-family: Quicksand;
+    margin-right: 10px;
+  }
 }
 .container table {
   margin-top: 40px;
@@ -586,12 +1074,21 @@ section .container .model-play .start-game .rules .btn-start-game {
   width: 35px;
 }
 
+@media screen and (max-width: 600px) {
+  .email,
+  .phone {
+    display: none;
+  }
+}
 .setting {
   padding-top: 20px;
   font-family: Quicksand;
 }
 .setting p {
   font-weight: 600;
+}
+.setting .product-charactor {
+  height: 278px;
 }
 .setting .product-charactor .upload-image-product .upload-image {
   position: relative;
@@ -622,7 +1119,7 @@ section .container .model-play .start-game .rules .btn-start-game {
   font-size: 14px;
   color: #fff;
   font-weight: unset;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Quicksand;
 }
 .setting .product-charactor .upload-image-product .upload-image .btn-upload-product {
   z-index: 2;
@@ -825,4 +1322,266 @@ section .container .model-play .start-game .rules .btn-start-game {
   border: unset;
   color: #fff;
   padding: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .setting {
+    padding-top: 20px;
+    font-family: Quicksand;
+  }
+  .setting p {
+    font-weight: 600;
+  }
+  .setting .product-charactor {
+    height: 400px;
+  }
+  .setting .product-charactor .col-xs-12 {
+    height: 200px;
+  }
+  .setting .product-charactor .col-xs-12 .upload-image-product .upload-image {
+    position: relative;
+    margin-bottom: 12px;
+    display: flex;
+    height: 30px;
+    border-radius: 36px;
+    background: linear-gradient(90deg, #821800 -35.4%, #ed8500 122.69%);
+    align-items: center;
+    justify-content: space-between;
+    width: 135px;
+    z-index: 1;
+    padding: 0 15px;
+  }
+  .setting .product-charactor .col-xs-12 .upload-image-product .upload-image::before {
+    content: "";
+    left: 4%;
+    z-index: 1;
+    position: absolute;
+    width: 125px;
+    height: 20px;
+    border-radius: 26px;
+    background: linear-gradient(90deg, rgba(237, 133, 0, 0.19) -102.58%, rgba(112, 21, 0, 0.93) 98.52%);
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.6) inset;
+  }
+  .setting .product-charactor .col-xs-12 .upload-image-product .upload-image .label-product {
+    z-index: 2;
+    font-size: 12px;
+    color: #fff;
+    font-weight: unset;
+    font-family: Quicksand;
+  }
+  .setting .product-charactor .col-xs-12 .upload-image-product .upload-image .btn-upload-product {
+    z-index: 2;
+  }
+  .setting .product-charactor .col-xs-12 .upload-image-product .upload-image .btn-upload-product img {
+    width: 12px;
+  }
+  .setting .product-charactor .col-xs-12 .upload-image-product .upload-image .fileInput {
+    display: none;
+  }
+  .setting .product-charactor .col-xs-12 .upload-image-product .upload-image .viewImage {
+    border: unset;
+    position: absolute;
+    left: 105%;
+    width: 30px;
+    height: 30px;
+    background: url("../image/viewImage.png");
+    background-size: cover;
+  }
+  .setting .product-charactor .col-xs-12 .img-product {
+    display: none;
+    position: absolute;
+    z-index: 9;
+    width: 150px;
+    height: 150px;
+    left: 30%;
+    top: 10%;
+    background-size: cover;
+    background-position: center;
+  }
+  .setting .product-charactor .col-xs-12 .add-product {
+    height: 20px;
+  }
+  .setting .product-charactor .col-xs-12 .add-product #btn-add-product {
+    background: url(../image/add.png);
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    border: unset;
+  }
+  .setting .product-charactor .col-xs-12 .products .product-title {
+    position: relative;
+    margin-bottom: 12px;
+    display: flex;
+    height: 30px;
+    border-radius: 36px;
+    background: linear-gradient(90deg, #821800 -35.4%, #ed8500 122.69%);
+    align-items: center;
+    justify-content: space-between;
+    width: 135px;
+    z-index: 1;
+    padding: 0 30px;
+  }
+  .setting .product-charactor .col-xs-12 .products .product-title .name-product {
+    font-size: 12px;
+    z-index: 5;
+    left: 4%;
+    z-index: 1;
+    position: absolute;
+    width: 125px;
+    height: 20px;
+    border-radius: 26px;
+    background: linear-gradient(90deg, rgba(237, 133, 0, 0.19) -102.58%, rgba(112, 21, 0, 0.93) 98.52%);
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.6) inset;
+    border: unset;
+    color: #fff;
+    padding: 10px;
+  }
+  .setting .product-charactor .col-xs-12 .products .product-title .name-product::-moz-placeholder {
+    color: #fff;
+  }
+  .setting .product-charactor .col-xs-12 .products .product-title .name-product::placeholder {
+    color: #fff;
+  }
+  .setting .product-charactor .col-xs-12 .products .product-title .name-product:focus {
+    outline: none;
+    border: none;
+  }
+  .setting .product-charactor .col-xs-12 .products .product-title .removeProduct {
+    background: url(../image/remove.png);
+    border: unset;
+    position: absolute;
+    left: 105%;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+  }
+  .setting .product-charactor .upload-image-charactor .upload-image {
+    position: relative;
+    margin-bottom: 12px;
+    display: flex;
+    height: 30px;
+    border-radius: 36px;
+    background: linear-gradient(90deg, #821800 -35.4%, #ed8500 122.69%);
+    align-items: center;
+    justify-content: space-between;
+    width: 135px;
+    z-index: 1;
+    padding: 0 15px;
+  }
+  .setting .product-charactor .upload-image-charactor .upload-image::before {
+    content: "";
+    left: 4%;
+    z-index: 1;
+    position: absolute;
+    width: 125px;
+    height: 20px;
+    border-radius: 26px;
+    background: linear-gradient(90deg, rgba(237, 133, 0, 0.19) -102.58%, rgba(112, 21, 0, 0.93) 98.52%);
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.6) inset;
+  }
+  .setting .product-charactor .upload-image-charactor .upload-image .label-charactor {
+    z-index: 2;
+    font-size: 12px;
+    color: #fff;
+    font-weight: unset;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .setting .product-charactor .upload-image-charactor .upload-image .btn-upload-charactor {
+    z-index: 2;
+  }
+  .setting .product-charactor .upload-image-charactor .upload-image .btn-upload-charactor img {
+    width: 12px;
+  }
+  .setting .product-charactor .upload-image-charactor .upload-image .fileInput {
+    display: none;
+  }
+  .setting .product-charactor .upload-image-charactor .upload-image .removeCharactor {
+    border: unset;
+    position: absolute;
+    left: 105%;
+    width: 30px;
+    height: 30px;
+    background: url("../image/remove.png");
+    background-size: cover;
+  }
+  .setting .product-charactor .add-charactor {
+    height: 20px;
+  }
+  .setting .product-charactor .add-charactor #btn-add-charactor {
+    background: url(../image/add.png);
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    border: unset;
+  }
+  .setting .general .input-general .input-style {
+    position: relative;
+    margin-bottom: 12px;
+    display: flex;
+    height: 30px;
+    border-radius: 36px;
+    background: linear-gradient(90deg, #821800 -35.4%, #ed8500 122.69%);
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    z-index: 1;
+    padding: 0 30px;
+  }
+  .setting .general .input-general .input-style .countDown {
+    z-index: 5;
+    left: 1.5%;
+    position: absolute;
+    width: 97%;
+    height: 20px;
+    border-radius: 26px;
+    background: linear-gradient(90deg, rgba(237, 133, 0, 0.19) -102.58%, rgba(112, 21, 0, 0.93) 98.52%);
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.6) inset;
+    border: unset;
+    color: #fff;
+    padding: 10px;
+    font-size: 12px;
+  }
+  .setting .general .input-general .input-style .countDown::-moz-placeholder {
+    color: #fff;
+  }
+  .setting .general .input-general .input-style .countDown::placeholder {
+    color: #fff;
+  }
+  .setting .general .input-general .input-style .countDown:focus {
+    outline: none;
+    border: none;
+  }
+  .setting .general .input-general .note {
+    position: absolute;
+    left: 105%;
+    width: 70%;
+    font-size: 9px;
+    font-family: Quicksand;
+  }
+  .setting .save-setting {
+    position: relative;
+    display: flex;
+    height: 30px;
+    border-radius: 36px;
+    background: #FFF;
+    box-shadow: 2px -2px 10px 0px rgba(0, 0, 0, 0.3) inset;
+    align-items: center;
+    justify-content: space-between;
+    width: 59%;
+    z-index: 1;
+    padding: 0 30px;
+  }
+  .setting .save-setting #save {
+    z-index: 5;
+    left: 1.5%;
+    position: absolute;
+    width: 97%;
+    height: 20px;
+    border-radius: 36px;
+    background: linear-gradient(180deg, #FF5050 0.08%, #D30000 100%);
+    border: unset;
+    color: #fff;
+    padding: 0;
+    font-size: 10px;
+  }
 }/*# sourceMappingURL=index.css.map */

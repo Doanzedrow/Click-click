@@ -70,6 +70,7 @@ var maxTime = 100;
 // --------------------------------------------Thực hiện chức năng-----------------------------------
 $(document).ready(function () {
   CLICK.pageActive();
+  CLICK.clickSideBar();
   CLICK.getUISetting();
   CLICK.getUI();
   // CLICK.getMusic();
@@ -79,6 +80,17 @@ $(document).ready(function () {
   CLICK.addInputCharactor();
   CLICK.setting();
 });
+
+CLICK.clickSideBar = () => {
+  $("#btn-bar").on("click", function () {
+    $(".nav-bar").hide();
+    $(".header-nav").css("display", "flex");
+  });
+  $("section .container").on("click", function () {
+    $(".nav-bar").show();
+    $(".header-nav").hide();
+  });
+};
 
 CLICK.startGame = () => {
   $(".btn-start-game").on("click", function () {
@@ -156,8 +168,19 @@ CLICK.getRandomQuestion = () => {
   var randomProduct = Math.floor(Math.random() * products.length);
   //thứ tự người hỏi
   var randomPlayer = CLICK.getRandomIntInclusive(0, charactors.length - 1);
-  //Tìm được người hỏi
   var player = $(".player-model").children().eq(randomPlayer);
+
+  $(".player-model").animate(
+    {
+      scrollLeft:
+        player.offset().left -
+        $(".player-model").offset().left +
+        $(".player-model").scrollLeft(),
+    },
+    500
+  );
+
+  //Tìm được người hỏi
   var count = 0;
   var point_content = $(".point-content");
   //Hiển thị câu hỏi
@@ -433,7 +456,8 @@ CLICK.setting = () => {
 CLICK.addInputProduct = () => {
   $("#btn-add-product").off();
   $("#btn-add-product").on("click", function () {
-    var countTag = products.length;
+    var countTag = $(".upload-image-product .upload-image").length;
+    console.log(countTag);
     if (countTag > 2) {
       $(".add-product").hide();
     }
@@ -490,7 +514,7 @@ CLICK.addInputProduct = () => {
 CLICK.addInputCharactor = () => {
   $("#btn-add-charactor").off();
   $("#btn-add-charactor").on("click", function () {
-    var countTag = charactors.length;
+    var countTag = $(".upload-image-charactor .upload-image").length;
     if (countTag > 2) {
       $(".add-charactor").hide();
     }

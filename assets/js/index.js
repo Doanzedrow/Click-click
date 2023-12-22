@@ -66,7 +66,8 @@ var generalSettings = localStorage.getItem("generalSettings");
 var general = JSON.parse(generalSettings);
 var targetQuesId = "";
 var countDown = general.countDown;
-var maxTime = 100;
+var countTime;
+
 // --------------------------------------------Thực hiện chức năng-----------------------------------
 $(document).ready(function () {
   CLICK.pageActive();
@@ -97,17 +98,18 @@ CLICK.startGame = () => {
     CLICK.countTimePlay();
   });
 };
-
 // func đếm thời gian chạy trò chơi
-CLICK.getTime = (countDown) => {
+CLICK.getTime = () => {
+  console.log(countDown);
   var time = $("#customProgressBar");
   var model = $(".model");
+  var maxTime = 100;
+  time.css("width", maxTime + "%");
   //cho thời gian chạy là 1s => 100% là 100s
-  var countTime = setInterval(function () {
+  countTime = setInterval(function () {
     time.css("width", maxTime + "%");
     maxTime--;
     if (maxTime <= 0) {
-      maxTime = maxTime;
       model.css("display", "flex");
       $(".login_model").show();
       $(".score").show();
@@ -117,6 +119,7 @@ CLICK.getTime = (countDown) => {
       // CLICK.countTimePlay();
     }
   }, countDown);
+
   var exit_model = $("#icon_exit");
   var pause = $("#pause");
   var isPaused = false;
@@ -161,7 +164,6 @@ CLICK.getTime = (countDown) => {
 };
 
 CLICK.getRandomQuestion = () => {
-  CLICK.getTime(countDown);
   //số con vật xuất hiện
   var numberRandom = CLICK.getRandomIntInclusive(1, 10);
   //là con vật thứ bao nhiêu
@@ -213,13 +215,19 @@ CLICK.getRandomQuestion = () => {
   $("[id^='ques_']").on("click", function () {
     //Kiểm tra xem id của con vật đó
     var clickedId = $(this).attr("id");
-    console.log(clickedId + "---" + targetQuesId);
     //khi id con vật đó đúng với id mà đã random ra (sai thì hiện wrong đúng thì đếm só)
     if (clickedId !== targetQuesId) {
       wrong.play();
       $(this).children("#wrong").show();
       $("[id^='ques_']").css("pointer-events", "none");
-      CLICK.getTime(0);
+      clearInterval(countTime);
+      setTimeout(function () {
+        $(".model").css("display", "flex");
+        $(".login_model").show();
+        $(".score").show();
+        $(".continue").hide();
+        $(".title_model").html("Your points");
+      }, 1000);
     } else {
       click.play();
       count++;
@@ -236,10 +244,12 @@ CLICK.getRandomQuestion = () => {
         $(".level").html(
           `Level ${parseInt($(".level").html().split(" ")[1], 10) + 1}`
         );
-        countDown = general.countDown - general.difficulty;
+        countDown = countDown - general.difficulty;
         CLICK.resetCharator(player, randomPlayer);
         CLICK.resetQuestion();
         CLICK.getRandomQuestion();
+        clearInterval(countTime);
+        CLICK.getTime();
       }
     }
   });
@@ -337,6 +347,7 @@ CLICK.countTimePlay = () => {
       $(".player-model").css("display", "flex");
       countdown.stop();
       CLICK.getRandomQuestion();
+      CLICK.getTime();
     }
   }, 1000);
 };
@@ -457,7 +468,6 @@ CLICK.addInputProduct = () => {
   $("#btn-add-product").off();
   $("#btn-add-product").on("click", function () {
     var countTag = $(".upload-image-product .upload-image").length;
-    console.log(countTag);
     if (countTag > 2) {
       $(".add-product").hide();
     }
@@ -596,7 +606,6 @@ CLICK.displayImage = (fileInputId, imgProduct, labelProduct) => {
 //Hiển thị UI bằng dữ liệu đã lưu ở localStorage
 CLICK.getUISetting = () => {
   var countTag = products.length;
-  console.log(countTag);
   if (countTag > 3) {
     $(".add-product").hide();
   }
